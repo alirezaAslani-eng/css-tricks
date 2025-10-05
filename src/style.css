@@ -91,3 +91,11 @@ body {
     -10px -10px 10px rgb(from var(--paper-white) r g b / 0.8);
 }
 /* Finish Morphism Shadow Effect ========================= >*/
+
+.text-gradient {
+  background-image: linear-gradient(to right, #74ebd5 0%, #9face6 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(24px, 10vw, 60px);
+  text-align: center;
+}
