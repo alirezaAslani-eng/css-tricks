@@ -5,13 +5,15 @@
 }
 
 body {
-  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background-color: var(--background-color);
   font-family: "Roboto";
+}
+* {
+  box-sizing: border-box;
 }
 .title {
   font-size: 2rem;
@@ -20,6 +22,7 @@ body {
 }
 .container {
   padding: 30px 1.5rem;
+  width: 100%;
 }
 
 /* Start Slider Style ======================== > */
@@ -98,4 +101,46 @@ body {
   color: transparent;
   font-size: clamp(24px, 10vw, 60px);
   text-align: center;
+}
+
+/* Infinit Carousel */
+
+.carousel {
+  width: 100%;
+  position: relative;
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel .group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  animation: carousel 10s infinite linear;
+}
+.carousel .group .card {
+  height: 200px;
+  flex: 0 0 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-asphalt);
+  color: var(--background-color);
+  border-radius: 20px;
+  font-size: 27px;
+}
+
+@keyframes carousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }
