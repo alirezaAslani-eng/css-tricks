@@ -1,0 +1,59 @@
+:root {
+  --text-asphalt: #34495e;
+  --paper-white: #fff;
+  --background-color: #ecf0f1;
+}
+
+body {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background-color);
+  font-family: "Roboto";
+}
+.title {
+  font-size: 2rem;
+  color: var(--text-asphalt);
+  text-align: center;
+}
+.container {
+  padding: 30px 1.5rem;
+}
+/* Start Slider Style ======================== > */
+.slider {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-radius: 20px;
+}
+.slide {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--paper-white);
+}
+/* Property we need to use */
+.slider {
+  overflow-x: scroll;
+  /* property that cause slider works well */
+  scroll-snap-type: x mandatory;
+}
+.slide {
+  /* Centralize slide elemnt */
+  scroll-snap-align: center;
+}
+/* Slider Text */
+.slide h4 {
+  font-size: 26px;
+  color: var(--text-asphalt);
+}
+
+/* Finish Slider Style ======================== > */
