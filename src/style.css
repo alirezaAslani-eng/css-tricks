@@ -21,6 +21,7 @@ body {
 .container {
   padding: 30px 1.5rem;
 }
+
 /* Start Slider Style ======================== > */
 .slider {
   width: 300px;
@@ -55,5 +56,38 @@ body {
   font-size: 26px;
   color: var(--text-asphalt);
 }
-
 /* Finish Slider Style ======================== > */
+
+/* Start Morphism Shadow Effect ========================= >*/
+.morphism-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.morphism-box-inset,
+.morphism-box {
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  font-size: 28px;
+  color: var(--text-asphalt);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 300ms;
+}
+.morphism-box-inset {
+  box-shadow: -10px -10px 10px rgb(from var(--text-asphalt) r g b / 0.2) inset,
+    10px 10px 10px rgb(from var(--paper-white) r g b / 0.8) inset;
+}
+.morphism-box-inset:active {
+  box-shadow: -10px -10px 10px rgb(from var(--text-asphalt) r g b / 0.2) inset,
+    10px 10px 10px rgb(from var(--paper-white) r g b / 0.8) inset;
+}
+.morphism-box {
+  box-shadow: 10px 10px 10px rgb(from var(--text-asphalt) r g b / 0.2),
+    -10px -10px 10px rgb(from var(--paper-white) r g b / 0.8);
+}
+/* Finish Morphism Shadow Effect ========================= >*/
