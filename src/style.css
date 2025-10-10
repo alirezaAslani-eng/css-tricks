@@ -148,8 +148,7 @@ body {
 
 /* Finish Infinit Carousel =============================== >*/
 
-
-
+/* Start Checkbox =============================== >*/
 /* CheckBox wrapper */
 .check-box {
   width: 80px;
@@ -208,3 +207,45 @@ body {
 .check-box .check-box-container input:checked ~ .background {
   background-color: rgb(from var(--color-light-greenish-blue) r g b / 0.2);
 }
+/* Finish Checkbox =============================== >*/
+
+/* Start 3d rotate =============================== >*/
+.box-3d-container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  perspective: 800px;
+}
+.box-3d-container .face {
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  transition: all ease 800ms;
+  border-radius: 20px;
+}
+.box-3d-container .back,
+.box-3d-container .front {
+  width: 100%;
+  height: 100%;
+}
+.box-3d-container .front {
+  background-color: yellow;
+}
+.box-3d-container .back {
+  transform: rotateY(180deg);
+  background-color: red;
+}
+
+.box-3d-container:hover .front {
+  transform: rotateY(180deg);
+}
+.box-3d-container:hover .back {
+  transform: rotateY(360deg);
+}
+/* Finish 3d rotate =============================== >*/
